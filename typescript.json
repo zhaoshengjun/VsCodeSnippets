@@ -1,0 +1,59 @@
+{
+/*
+	 // Place your snippets for TypeScript here. Each snippet is defined under a snippet name and has a prefix, body and 
+	 // description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	 // $1, $2 for tab stops, ${id} and ${id:label} and ${1:label} for variables. Variables with the same id are connected.
+	 // Example:
+	 "Print to console": {
+		"prefix": "log",
+		"body": [
+			"console.log('$1');",
+			"$2"
+		],
+		"description": "Log output to console"
+	}
+*/
+	"ionic2-app":{
+		"prefix": "ion2app",
+		"body": [
+			"import {App, Platform} from 'ionic-angular';",
+			"import {StatusBar} from 'ionic-native';",
+			"import {$1} from '$2';",
+			"",
+			"@App({",
+			"\ttemplate: '<ion-nav [root]=rootPage></ion-nav>',",
+			"\tconfig: {} // http://ionicframework.com/docs/v2/api/config/Config/",
+			"})",
+			"export class MyApp {",
+			"\trootPage: any = $1;",
+			"",
+			"\tconstructor(platform: Platform) {",
+			"\t\tplatform.ready().then(() => {",
+			"\t\t\t// Okay, so the platform is ready and our plugins are available.",
+			"\t\t\t// Here you can do any higher level native things you might need.",
+			"\t\t\tStatusBar.styleDefault();",
+			"\t\t});",
+			"\t}",
+			"}"
+		],
+		"description": "Ionic2 App"
+	},
+	"ng2-directive":{
+		"prefix": "ng2-directive",
+		"body": [
+			"import { Directive, ElementRef, Input } from 'angular2/core';",
+			"",
+			"@Directive({",
+			"  selector: '[$1]'  ",
+			"})",
+			"export class $2Directive {",
+			"  private el: HTMLElement;",
+			"    ",
+			"  constructor(el: ElementRef) { this.el = el.nativeElement; }",
+			"",
+			"",
+			"}"
+		],
+		"description": "Angular 2 Directive"
+	}
+}
